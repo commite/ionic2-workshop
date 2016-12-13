@@ -9,13 +9,11 @@ export class LoftsmartAPI {
 
   storage = window.localStorage;
   endpoint: string;
-  http: Http;
   userLoggedIn: EventEmitter<any> = new EventEmitter();
   userLoggedOut: EventEmitter<any> = new EventEmitter();
 
-  constructor(config: Config, http: Http) {
+  constructor(public config: Config, public http: Http) {
     console.log('Calling API constructor');
-    this.http = http;
     this.endpoint = config.get('apiEndpoint');
   }
 
