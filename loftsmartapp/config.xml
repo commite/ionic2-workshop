@@ -11,6 +11,12 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+
+    <!-- A wildcard can be used to whitelist the entire network,
+         over HTTP and HTTPS.
+         *NOT RECOMMENDED* -->
+    <allow-navigation href="*" />
+
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
