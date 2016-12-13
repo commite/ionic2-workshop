@@ -1,5 +1,9 @@
 // http://ionicframework.com/docs/v2/theming/
 
+.toast-md .toast-wrapper,
+.toast-ios .toast-wrapper {
+  background-color: color($colors, toastcolor);
+}
 
 // App Global Sass
 // --------------------------------------------------
