@@ -1,7 +1,7 @@
 import {Observable} from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import {Injectable, EventEmitter} from '@angular/core';
-import {Http, Headers, RequestOptions, RequestMethod, Response} from '@angular/http';
+import {Http, Headers, RequestOptions, RequestMethod} from '@angular/http';
 import {Config} from 'ionic-angular';
 
 @Injectable()
