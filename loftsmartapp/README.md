@@ -68,7 +68,7 @@ Run this command:
     (MacOS)
     $ export ANDROID_HOME=~/Library/Android/Sdk/
 
-    $ ionic run android
+    $ ionic run android --device
 
 If the device is not detected (after enable USB debugging), try to restart adb:
 
