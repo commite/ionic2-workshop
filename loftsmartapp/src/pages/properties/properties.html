@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Properties list</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let property of properties.results">
+    <img *ngIf="property.images[0]"
+         [src]="baseURL + property.images[0].image.list"/>
+    <ion-card-content>
+      <ion-card-title>
+      {{ property.name }}
+      </ion-card-title>
+      <ion-item>
+        <ion-icon name="map" item-left small></ion-icon>
+        <p>{{ property.address }}</p>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -4,6 +4,7 @@ import { LoftsmartApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
+import { PropertiesPage } from '../pages/properties/properties';
 import { TabsPage } from '../pages/tabs/tabs';
 import { LoftsmartAPI } from '../providers/api';
 
@@ -13,6 +14,7 @@ import { LoftsmartAPI } from '../providers/api';
     AboutPage,
     ContactPage,
     HomePage,
+    PropertiesPage,
     TabsPage
   ],
   imports: [
@@ -28,6 +30,7 @@ import { LoftsmartAPI } from '../providers/api';
     AboutPage,
     ContactPage,
     HomePage,
+    PropertiesPage,
     TabsPage
   ],
   providers: [LoftsmartAPI, {provide: ErrorHandler, useClass: IonicErrorHandler}]
