@@ -34,4 +34,8 @@ export class HomePage {
         console.log('error');
       });
   }
+
+  logout() {
+    this.api.logout();
+  }
 }

@@ -20,4 +20,7 @@
 
   <button ion-button full (click)="login()">Login</button>
  </div>
+ <div *ngIf="api.isLogged()">
+  <button ion-button full (click)="logout()">Logout</button>
+ </div>
 </ion-content>
