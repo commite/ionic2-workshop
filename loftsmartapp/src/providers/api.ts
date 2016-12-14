@@ -89,6 +89,6 @@ export class LoftsmartAPI {
   }
 
   getProperties(): Observable<any> {
-    return this.get('/rest/property/search/?place='+ this.place + '&expand=landlord,main_place,neighborhood&page=1&sort=-_reviews_number');
+    return this.get('/schools/rest/property/search/?place='+ this.place + '&expand=landlord,main_place,neighborhood&page=1&sort=-_reviews_number');
   }
 }
