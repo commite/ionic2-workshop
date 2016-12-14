@@ -6,6 +6,7 @@ import { ProfilePage } from '../pages/profile/profile';
 import { FavoritesPage } from '../pages/favorites/favorites';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
+import { MapPage } from '../pages/map/map';
 import { PropertiesPage } from '../pages/properties/properties';
 import { TabsPage } from '../pages/tabs/tabs';
 import { LoftsmartAPI } from '../providers/api';
@@ -17,6 +18,7 @@ import { LoftsmartAPI } from '../providers/api';
     FavoritesPage,
     HomePage,
     LoginPage,
+    MapPage,
     ProfilePage,
     PropertiesPage,
     TabsPage
@@ -24,9 +26,10 @@ import { LoftsmartAPI } from '../providers/api';
   imports: [
     IonicModule.forRoot(LoftsmartApp, {
       tabsPlacement: 'bottom',
-      // apiEndpoint: 'https://aptu.co',
-      apiEndpoint: 'http://localhost:8002',
-      baseMediaURL: 'https://loftsmart-prod-media.s3.amazonaws.com/'
+      apiEndpoint: 'https://aptu.co',
+      // apiEndpoint: 'http://localhost:8002',
+      baseMediaURL: 'https://loftsmart-prod-media.s3.amazonaws.com/',
+      initialPlace: '29d0dbd1-0d4a-4c3b-a9aa-dda53db91239'
     })
   ],
   bootstrap: [IonicApp],
@@ -36,6 +39,7 @@ import { LoftsmartAPI } from '../providers/api';
     FavoritesPage,
     HomePage,
     LoginPage,
+    MapPage,
     ProfilePage,
     PropertiesPage,
     TabsPage

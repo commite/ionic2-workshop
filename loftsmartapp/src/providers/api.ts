@@ -9,12 +9,14 @@ export class LoftsmartAPI {
 
   storage = window.localStorage;
   endpoint: string;
+  place: string;
   userLoggedIn: EventEmitter<any> = new EventEmitter();
   userLoggedOut: EventEmitter<any> = new EventEmitter();
 
   constructor(public config: Config, public http: Http) {
     console.log('Calling API constructor');
     this.endpoint = config.get('apiEndpoint');
+    this.place = config.get('initialPlace');
   }
 
   getToken() {
@@ -87,6 +89,6 @@ export class LoftsmartAPI {
   }
 
   getProperties(): Observable<any> {
-    return this.get('/schools/rest/property/search/?place=95696c0b-409f-448b-ab25-6843b20bd625&expand=landlord,main_place,neighborhood&ne_lat=30.656192647212325&ne_lng=-96.33408832275393&sw_lat=30.54389804753594&sw_lng=-96.40979098999026&page=1&sort=-_reviews_number');
+    return this.get('/rest/property/search/?place='+ this.place + '&expand=landlord,main_place,neighborhood&page=1&sort=-_reviews_number');
   }
 }

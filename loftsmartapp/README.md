@@ -60,6 +60,10 @@ Enable the USB debugging in the Android device
 
 Connect an Android device in the USB
 
+Make sure gradle has enough memory for building the app, so edit ~/.gradle/gradle.properties file and add the next line:
+
+    org.gradle.jvmargs=-Xmx3072m
+
 Run this command:
 
     (Linux)

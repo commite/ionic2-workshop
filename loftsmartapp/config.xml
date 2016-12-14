@@ -11,12 +11,7 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-
-    <!-- A wildcard can be used to whitelist the entire network,
-         over HTTP and HTTPS.
-         *NOT RECOMMENDED* -->
     <allow-navigation href="*" />
-
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
@@ -36,4 +31,8 @@
     </feature>
     <plugin name="cordova-plugin-crosswalk-webview" spec="~2.2.0" />
     <plugin name="cordova-plugin-whitelist" spec="https://github.com/apache/cordova-plugin-whitelist.git" />
+    <plugin name="cordova-plugin-googlemaps" spec="https://github.com/msaelices/cordova-plugin-googlemaps.git">
+        <variable name="API_KEY_FOR_ANDROID" value="AIzaSyCQRwJZYexarxxOi_yfDSUFZsacqHmXiV4" />
+    </plugin>
+    <plugin name="me.tonny.cordova.plugins.multidex" spec="https://github.com/jwall149/cordova-multidex" />
 </widget>

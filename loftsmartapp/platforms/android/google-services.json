@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "893764612937",
+    "project_id": "civil-envoy-131309"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893764612937:android:05e3797902994b8c",
+        "android_client_info": {
+          "package_name": "com.ionicframework.loftsmart129129"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "893764612937-1lf50jcldnefate9le500r0kctg0umme.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2sIVo11euKFn54GGkV_G1tNQUArltN10"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
