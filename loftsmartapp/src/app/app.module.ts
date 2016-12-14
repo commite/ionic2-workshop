@@ -20,8 +20,8 @@ import { LoftsmartAPI } from '../providers/api';
   imports: [
     IonicModule.forRoot(LoftsmartApp, {
       tabsPlacement: 'bottom',
-      // apiEndpoint: 'https://loftsmart.com',
-      apiEndpoint: 'http://localhost:8002',
+      apiEndpoint: 'https://loftsmart.com',
+      // apiEndpoint: 'http://localhost:8002',
       baseMediaURL: 'https://loftsmart-prod-media.s3.amazonaws.com/'
     })
   ],
