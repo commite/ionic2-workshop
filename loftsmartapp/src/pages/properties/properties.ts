@@ -8,18 +8,14 @@ import { LoftsmartAPI } from '../../providers/api'
   templateUrl: 'properties.html'
 })
 export class PropertiesPage {
-  properties: any;
+  properties: any[] = [];
   baseURL: string = 'https://loftsmart-prod-media.s3.amazonaws.com/';
 
   constructor(public navCtrl: NavController,
               public api: LoftsmartAPI) {
-    this.properties = {
-      results: []
-    };
     this.api.getProperties().subscribe(
       (res) => {
-        console.log(res);
-        this.properties = res;
+        this.properties = res.results;
       }, (err) => {
         console.error('Error:' + err);
       });
