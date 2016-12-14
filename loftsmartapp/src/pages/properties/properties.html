@@ -9,7 +9,7 @@
 <ion-content padding>
   <ion-card *ngFor="let property of properties">
     <img *ngIf="property.images[0]"
-         [src]="baseURL + property.images[0].image.list" />
+         [src]="getImageURL(property)" />
     <ion-card-content>
       <ion-card-title>
       {{ property.name }}

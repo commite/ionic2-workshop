@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Config, NavController } from 'ionic-angular';
 import { LoftsmartAPI } from '../../providers/api'
 
 
@@ -9,16 +9,23 @@ import { LoftsmartAPI } from '../../providers/api'
 })
 export class PropertiesPage {
   properties: any[] = [];
-  baseURL: string = 'https://loftsmart-prod-media.s3.amazonaws.com/';
+  baseURL: string;
 
-  constructor(public navCtrl: NavController,
+  constructor(public config: Config,
+              public navCtrl: NavController,
               public api: LoftsmartAPI) {
+    this.baseURL = config.get('baseMediaURL');
     this.api.getProperties().subscribe(
       (res) => {
         this.properties = res.results;
       }, (err) => {
         console.error('Error:' + err);
       });
+  }
+
+  getImageURL(property) {
+    // hack: remove the /media/ URL fragment if exists to be used in devel Django env
+    return this.baseURL + property.images[0].image.list.replace('/media/', '');
   }
 
   ionViewDidLoad() {
