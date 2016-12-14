@@ -2,8 +2,9 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { LoftsmartApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
+import { ProfilePage } from '../pages/profile/profile';
 import { HomePage } from '../pages/home/home';
+import { LoginPage } from '../pages/login/login';
 import { PropertiesPage } from '../pages/properties/properties';
 import { TabsPage } from '../pages/tabs/tabs';
 import { LoftsmartAPI } from '../providers/api';
@@ -12,8 +13,9 @@ import { LoftsmartAPI } from '../providers/api';
   declarations: [
     LoftsmartApp,
     AboutPage,
-    ContactPage,
+    ProfilePage,
     HomePage,
+    LoginPage,
     PropertiesPage,
     TabsPage
   ],
@@ -29,8 +31,9 @@ import { LoftsmartAPI } from '../providers/api';
   entryComponents: [
     LoftsmartApp,
     AboutPage,
-    ContactPage,
+    ProfilePage,
     HomePage,
+    LoginPage,
     PropertiesPage,
     TabsPage
   ],

@@ -7,20 +7,7 @@
 <ion-content padding>
   <h2>Welcome to Loftsmart!</h2>
 
- <div *ngIf="!api.isLogged()">
-  <ion-item>
-    <ion-label fixed>Username</ion-label>
-    <ion-input [(ngModel)]="user.username" type="text" value=""></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label fixed>Password</ion-label>
-    <ion-input [(ngModel)]="user.password" type="password"></ion-input>
-  </ion-item>
-
-  <button ion-button full (click)="login()">Login</button>
- </div>
- <div *ngIf="api.isLogged()">
-  <button ion-button full (click)="logout()">Logout</button>
- </div>
+  <div *ngIf="api.isLogged()">
+    <button ion-button full (click)="logout()">Logout</button>
+  </div>
 </ion-content>

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Profile
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngIf="!isLogged">
+    <h2 text-center>You are not logged in yet</h2>
+    <p text-center>You will need to sign in in order to access your profile</p>
+    <button ion-button full (click)="goToLogin()">Go to login</button>
+  </div>
+
+  <ion-list *ngIf="isLogged">
+    <ion-list-header>Your profile</ion-list-header>
+  </ion-list>
+</ion-content>
