@@ -7,9 +7,10 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card *ngFor="let property of properties">
-    <img *ngIf="property.images[0]"
-         [src]="getImageURL(property)" />
+<ion-list [virtualScroll]="properties" approxItemHeight="320px">
+  <ion-card *virtualItem="let property">
+    <ion-img *ngIf="property.images[0]" width="100%" height="100px"
+             [src]="getImageURL(property)"></ion-img>
     <ion-card-content>
       <ion-card-title>
       {{ property.name }}
@@ -20,4 +21,5 @@
       </ion-item>
     </ion-card-content>
   </ion-card>
+</ion-list>
 </ion-content>
