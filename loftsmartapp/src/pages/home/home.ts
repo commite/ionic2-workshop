@@ -13,8 +13,4 @@ export class HomePage {
   constructor(public navCtrl: NavController,
               public api: LoftsmartAPI) {
   }
-
-  logout() {
-    this.api.logout();
-  }
 }
