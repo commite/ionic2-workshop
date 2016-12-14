@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Config, NavController } from 'ionic-angular';
+import { Config, LoadingController, NavController, Loading } from 'ionic-angular';
 import { LoftsmartAPI } from '../../providers/api'
 
 
@@ -10,14 +10,17 @@ import { LoftsmartAPI } from '../../providers/api'
 export class PropertiesPage {
   properties: any[] = [];
   baseURL: string;
+  loader: Loading;
 
   constructor(public config: Config,
               public navCtrl: NavController,
+              public loadingCtrl: LoadingController,
               public api: LoftsmartAPI) {
     this.baseURL = config.get('baseMediaURL');
     this.api.getProperties().subscribe(
       (res) => {
         this.properties = res.results;
+        this.loader.dismiss();
       }, (err) => {
         console.error('Error:' + err);
       });
@@ -30,6 +33,11 @@ export class PropertiesPage {
 
   ionViewDidLoad() {
     console.log('Hello PropertiesPage Page');
+    this.loader = this.loadingCtrl.create({
+      content: "Please wait...",
+      duration: 3000
+    });
+    this.loader.present();
   }
 
 }
