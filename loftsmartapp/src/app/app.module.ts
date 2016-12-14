@@ -28,7 +28,7 @@ import { LoftsmartAPI } from '../providers/api';
       tabsPlacement: 'bottom',
       apiEndpoint: 'https://aptu.co',
       // apiEndpoint: 'http://localhost:8002',
-      baseMediaURL: 'https://loftsmart-prod-media.s3.amazonaws.com/',
+      baseMediaURL: '',
       initialPlace: '29d0dbd1-0d4a-4c3b-a9aa-dda53db91239'
     })
   ],
