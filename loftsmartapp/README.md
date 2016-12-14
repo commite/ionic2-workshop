@@ -68,7 +68,7 @@ Run this command:
     (MacOS)
     $ export ANDROID_HOME=~/Library/Android/Sdk/
 
-    $ ionic run android --device
+    $ ./run.sh
 
 If the device is not detected (after enable USB debugging), try to restart adb:
 
@@ -90,7 +90,7 @@ To log the device:
 
 Run the ionic http server:
 
-    $ ionic serve
+    $ ./serve.sh
 
 Open the chromium-browser disabling web security to be able to access the backend:
 
