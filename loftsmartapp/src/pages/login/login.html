@@ -8,15 +8,23 @@
 
 
 <ion-content padding>
-  <ion-item>
-    <ion-label fixed>Username</ion-label>
-    <ion-input [(ngModel)]="user.username" type="text" value=""></ion-input>
-  </ion-item>
+  <form [formGroup]="form" novalidate>
+    <ion-item>
+      <ion-label fixed>Username</ion-label>
+      <ion-input [(ngModel)]="user.username" type="text" formControlName="username"></ion-input>
+    </ion-item>
+    <p class="errors" *ngIf="!form.controls['username'].valid && form.controls['username'].touched">
+      {{ form.controls['username']|formatErrors }}
+    </p>
 
-  <ion-item>
-    <ion-label fixed>Password</ion-label>
-    <ion-input [(ngModel)]="user.password" type="password"></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-label fixed>Password</ion-label>
+      <ion-input [(ngModel)]="user.password" type="password" formControlName="password"></ion-input>
+    </ion-item>
+    <p class="errors" *ngIf="!form.controls['password'].valid && form.controls['password'].touched">
+      {{ form.controls['password']|formatErrors }}
+    </p>
 
-  <button ion-button full (click)="login()">Login</button>
+    <button ion-button full (click)="login()">Login</button>
+  </form>
 </ion-content>

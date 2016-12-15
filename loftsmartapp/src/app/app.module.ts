@@ -9,6 +9,7 @@ import { MapPage } from '../pages/map/map';
 import { PropertiesPage } from '../pages/properties/properties';
 import { TabsPage } from '../pages/tabs/tabs';
 import { LoftsmartAPI } from '../providers/api';
+import { FormatErrorsPipe } from '../utils';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LoftsmartAPI } from '../providers/api';
     MapPage,
     ProfilePage,
     PropertiesPage,
-    TabsPage
+    TabsPage,
+    FormatErrorsPipe
   ],
   imports: [
     IonicModule.forRoot(LoftsmartApp, {
