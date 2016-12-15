@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Config, LoadingController, NavController, Loading } from 'ionic-angular';
-import { LoftsmartAPI } from '../../providers/api'
+import { LoftsmartAPI } from '../../providers/api';
+import { MapPage } from '../map/map';
 
 
 @Component({
@@ -61,5 +62,9 @@ export class PropertiesPage {
       this.query = '';
     }
     this.refreshProperties();
+  }
+
+  goToProperty(property) {
+    this.navCtrl.push(MapPage, {'property': property});
   }
 }

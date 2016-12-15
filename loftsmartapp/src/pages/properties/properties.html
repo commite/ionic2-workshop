@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card *ngFor="let property of properties">
+  <ion-card *ngFor="let property of properties" (click)="goToProperty(property)">
     <img *ngIf="property.images[0]"
          [src]="getImageURL(property)" />
     <ion-card-content>
@@ -13,8 +13,7 @@
       {{ property.name }}
       </ion-card-title>
       <ion-item>
-        <ion-icon name="map" item-left small></ion-icon>
-        <p>{{ property.address }}</p>
+        <p><ion-icon name="md-pin" small></ion-icon> {{ property.address }}</p>
       </ion-item>
     </ion-card-content>
   </ion-card>
