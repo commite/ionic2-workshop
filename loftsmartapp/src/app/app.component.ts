@@ -29,7 +29,6 @@ export class LoftsmartApp {
     // the left menu only works after login
     // the login page disables the left menu
     this.pages = [
-      { title: 'Home', component: TabsPage, icon: 'home' },
       { title: 'About', component: AboutPage, icon: 'information-circle' }
     ];
   }

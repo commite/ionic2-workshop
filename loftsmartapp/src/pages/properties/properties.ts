@@ -10,6 +10,7 @@ import { LoftsmartAPI } from '../../providers/api'
 export class PropertiesPage {
   properties: any[] = [];
   baseURL: string;
+  query: string = '';
   loader: Loading;
 
   constructor(public config: Config,
@@ -17,13 +18,30 @@ export class PropertiesPage {
               public loadingCtrl: LoadingController,
               public api: LoftsmartAPI) {
     this.baseURL = config.get('baseMediaURL');
-    this.api.getProperties().subscribe(
+    this.loadProperties();
+  }
+
+  loadProperties() {
+    this.api.getProperties(this.query).subscribe(
       (res) => {
         this.properties = res.results;
         this.loader.dismiss();
       }, (err) => {
         console.error('Error:' + err);
       });
+  }
+
+  showLoading() {
+    this.loader = this.loadingCtrl.create({
+      content: "Please wait...",
+      duration: 10000
+    });
+    this.loader.present();
+  }
+
+  refreshProperties() {
+    this.showLoading();
+    this.loadProperties();
   }
 
   getImageURL(property) {
@@ -33,11 +51,15 @@ export class PropertiesPage {
 
   ionViewDidLoad() {
     console.log('Hello PropertiesPage Page');
-    this.loader = this.loadingCtrl.create({
-      content: "Please wait...",
-      duration: 3000
-    });
-    this.loader.present();
+    this.showLoading();
   }
 
+  changeSearchbar(searchbar) {
+    if (searchbar && searchbar.target.value) {
+      this.query = searchbar.target.value;
+    } else {
+      this.query = '';
+    }
+    this.refreshProperties();
+  }
 }

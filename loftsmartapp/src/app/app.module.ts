@@ -4,7 +4,6 @@ import { LoftsmartApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ProfilePage } from '../pages/profile/profile';
 import { FavoritesPage } from '../pages/favorites/favorites';
-import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { MapPage } from '../pages/map/map';
 import { PropertiesPage } from '../pages/properties/properties';
@@ -16,7 +15,6 @@ import { LoftsmartAPI } from '../providers/api';
     LoftsmartApp,
     AboutPage,
     FavoritesPage,
-    HomePage,
     LoginPage,
     MapPage,
     ProfilePage,
@@ -37,7 +35,6 @@ import { LoftsmartAPI } from '../providers/api';
     LoftsmartApp,
     AboutPage,
     FavoritesPage,
-    HomePage,
     LoginPage,
     MapPage,
     ProfilePage,

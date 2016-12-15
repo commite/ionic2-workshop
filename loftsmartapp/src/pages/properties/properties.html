@@ -1,9 +1,7 @@
 <ion-header>
-
   <ion-navbar>
-    <ion-title>Properties list</ion-title>
+    <ion-searchbar [(ngModel)]="query" (ionInput)="changeSearchbar($event)"></ion-searchbar>
   </ion-navbar>
-
 </ion-header>
 
 <ion-content padding>
