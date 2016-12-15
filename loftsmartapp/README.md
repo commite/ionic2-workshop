@@ -58,6 +58,8 @@ Enable the USB debugging in the Android device
 
 ## Run app in an Android device:
 
+Install Java 1.8.0_51 in /usr/local/jdk1.8.0_51
+
 Connect an Android device in the USB
 
 Make sure gradle has enough memory for building the app, so edit ~/.gradle/gradle.properties file and add the next line:
