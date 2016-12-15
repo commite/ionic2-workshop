@@ -20,6 +20,8 @@
 // GENERATED FILE! DO NOT EDIT!
 
 apply plugin: 'android'
+
+// this has been added manually
 apply plugin: 'com.android.application'
 
 buildscript {
@@ -34,6 +36,8 @@ buildscript {
     // and https://issues.apache.org/jira/browse/CB-8143
     dependencies {
         classpath 'com.android.tools.build:gradle:2.1.0'
+
+        // this has been changed manually to the 3.0.0 version
         classpath 'com.google.gms:google-services:3.0.0'
     }
 }
@@ -41,10 +45,12 @@ buildscript {
 // Allow plugins to declare Maven dependencies via build-extras.gradle.
 repositories {
     mavenCentral()
+    // this has been added manually
     jcenter()
 }
 
 task wrapper(type: Wrapper) {
+    // this has been changed manually
     gradleVersion = '2.10'
 }
 
@@ -306,6 +312,7 @@ for (def func : cdvPluginPostBuildExtras) {
     func()
 }
 
+// this has to be at this point to make it work
 apply plugin: 'com.google.gms.google-services'
 
 // This can be defined within build-extras.gradle as:
